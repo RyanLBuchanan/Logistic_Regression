@@ -43,6 +43,8 @@ prediction = classifier.predict(sc.transform([[30, 87000]]))
 print(prediction)
 
 # Predict the Test set results
+y_pred = classifier.predict(X_test)
+print(np.concatenate((y_pred.reshape(len(y_pred), 1), y_test.reshape(len(y_test),1)),1))
 
 
 # Make the Confusion Matrix
