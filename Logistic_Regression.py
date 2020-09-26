@@ -35,8 +35,9 @@ print(X_test)
 
 # Train the Logistic Regression model on the Training set
 from sklearn.linear_model import LogisticRegression
-clf = LogisticRegression(random_state=0).fit(X, y)
-                                             
+classifier = LogisticRegression(random_state=0).fit(X, y)
+classifier.fit(X_train, y_train)
+
 # Predict a new result
 
 
